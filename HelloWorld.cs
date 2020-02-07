@@ -4,6 +4,8 @@ class SimpleApplication
 {
     static void Main()
     {
-        Console.WriteLine("Hello, World");
+        
+        Console.WriteLine("bruhhhhh whats you name???:");
+        string name = Console.ReadLine();
     }
 }
