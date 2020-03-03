@@ -2,53 +2,66 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace FuncActionDelegates
+namespace DelegatesAndLambdas
 {
-    public static class People
+    class Program
     {
-        public static List<Person> GetPeople()
-        {
-            var p = new List<Person>()
-            {
-                new Person() { FirstName="John", LastName="Koenig",
-                    StartDate = new DateTime(1975, 10, 17), Rating=6 },
-                new Person() { FirstName="Dylan", LastName="Hunt",
-                    StartDate = new DateTime(2000, 10, 2), Rating=8 },
-                new Person() { FirstName="John", LastName="Crichton",
-                    StartDate = new DateTime(1999, 3, 19), Rating=7 },
-                new Person() { FirstName="Dave", LastName="Lister",
-                    StartDate = new DateTime(1988, 2, 15), Rating=9 },
-                new Person() { FirstName="John", LastName="Sheridan",
-                    StartDate = new DateTime(1994, 1, 26), Rating=6 },
-                new Person() { FirstName="Dante", LastName="Montana",
-                    StartDate = new DateTime(2000, 11, 1), Rating=5 },
-                new Person() { FirstName="Isaac", LastName="Gampu",
-                    StartDate = new DateTime(1977, 9, 10), Rating=4 }
-            };
-            return p;
-        }
+        public class Author
+{
+    private string name;
+    private short age;
+    private string title;
+    private bool mvp;
+    private DateTime pubdate;
+    public delegate string dele(Author input);
+    public Author(string name, short age, string title, bool mvp, DateTime pubdate)
+    {
+        this.name = name;
+        this.age = age;
+        this.title = title;
+        this.mvp = mvp;
+        this.pubdate = pubdate;
     }
-
-    //public delegate string PersonFormat(Person input);
-
-    public class Person
+  
+    public string Name
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public DateTime StartDate { get; set; }
-        public int Rating { get; set; }
-
-        public override string ToString()
+        get { return name;  }
+        set { name = value; }
+    }
+  
+    public short Age
+    {
+        get { return age; }
+        set { age = value; }
+    }
+    public string BookTitle
+    {
+        get { return title; }
+        set { title = value; }
+    }
+    public bool IsMVP
+    {
+        get { return mvp; }
+        set { mvp = value; }
+    }
+    public DateTime PublishedDate
+    {
+        get { return pubdate; }
+        set { pubdate = value; }
+    }
+}
+        static void Main(string[] args)
         {
-            return string.Format("{0} {1}", FirstName, LastName);
-        }
+            List<Author> AuthorList = new List<Author>();
+            AuthorList.Add(new Author("Mahesh Chand", 35, "A Prorammer's Guide to ADO.NET", true, new DateTime(2003, 7, 10)));
+            AuthorList.Add(new Author("Neel Beniwal", 18, "Graphics Development with C#", false, new DateTime(2010, 2, 22)));
+            AuthorList.Add(new Author("Praveen Kumar", 28, "Mastering WCF", true, new DateTime(2012, 01, 01)));
+            AuthorList.Add(new Author("Mahesh Chand", 35, "Graphics Programming with GDI+", true, new DateTime(2008, 01, 20)));
+            AuthorList.Add(new Author("Raj Kumar", 30, "Building Creative Systems", false, new DateTime(2011, 6, 3)));
 
-        public string ToString(Func<Person, string> format)
-        {
-            if (format != null)
-                return format(this);
-            return this.ToString();
         }
+        public delegate int Comparison<in T>(T left, T right);
     }
 }
