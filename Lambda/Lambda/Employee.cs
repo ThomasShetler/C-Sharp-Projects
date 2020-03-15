@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lambda
-{
-    class Employee
+    namespace Lambda
     {
-        public int id { get; set; }
-        public string First { get; set; }
-        public string Last { get; set; }
+        class Employee
+        {
+            public int id { get; set; }
+            public string First { get; set; }
+            public string Last { get; set; }
 
+        }
     }
+
 }

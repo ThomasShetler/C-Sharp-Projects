@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lambda
+namespace Lambda2
 {
     class Program
     {
@@ -16,49 +16,49 @@ namespace Lambda
             employee1.Last = "smith";
 
             Employee employee2 = new Employee();
-            employee1.id = 2;
-            employee1.First = "Mike";
-            employee1.Last = "Jordans";
+            employee2.id = 2;
+            employee2.First = "Mike";
+            employee2.Last = "Jordans";
 
             Employee employee3 = new Employee();
-            employee1.id = 3;
-            employee1.First = "Jesse";
-            employee1.Last = "Wranker";
+            employee3.id = 3;
+            employee3.First = "Jesse";
+            employee3.Last = "Wranker";
 
             Employee employee4 = new Employee();
-            employee1.id = 4;
-            employee1.First = "Joe";
-            employee1.Last = "Reeter";
+            employee4.id = 4;
+            employee4.First = "Joe";
+            employee4.Last = "Reeter";
 
             Employee employee5 = new Employee();
-            employee1.id = 5;
-            employee1.First = "Liver";
-            employee1.Last = "Baby";
+            employee5.id = 5;
+            employee5.First = "Liver";
+            employee5.Last = "Baby";
 
             Employee employee6 = new Employee();
-            employee1.id = 6;
-            employee1.First = "Joe";
-            employee1.Last = "Budden";
+            employee6.id = 6;
+            employee6.First = "Joe";
+            employee6.Last = "Budden";
 
             Employee employee7 = new Employee();
-            employee1.id = 7;
-            employee1.First = "Kelly";
-            employee1.Last = "Nickle";
+            employee7.id = 7;
+            employee7.First = "Kelly";
+            employee7.Last = "Nickle";
 
             Employee employee8 = new Employee();
-            employee1.id = 8;
-            employee1.First = "Jane";
-            employee1.Last = "Johnson";
+            employee8.id = 8;
+            employee8.First = "Jane";
+            employee8.Last = "Johnson";
 
             Employee employee9 = new Employee();
-            employee1.id = 9;
-            employee1.First = "Toby";
-            employee1.Last = "Quezzy";
+            employee9.id = 9;
+            employee9.First = "Toby";
+            employee9.Last = "Quezzy";
 
             Employee employee10 = new Employee();
-            employee1.id = 10;
-            employee1.First = "Jody";
-            employee1.Last = "Jordans";
+            employee10.id = 10;
+            employee10.First = "Jody";
+            employee10.Last = "Jordans";
 
             List<Employee> employees = new List<Employee>();
             employees.Add(employee1);
@@ -74,6 +74,10 @@ namespace Lambda
 
             List<Employee> temp = new List<Employee>();
 
+            foreach (var employ in employees)
+            {
+                Console.WriteLine(employ.First + employ.Last + employ.id);
+            }
             foreach (var joe in employees)
             {
                 if (joe.First == "Joe")
