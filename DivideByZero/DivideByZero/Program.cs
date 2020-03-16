@@ -11,11 +11,16 @@ namespace DivideByZero
             try
             {
                 age = Convert.ToInt32(Console.ReadLine());
-                if (age < 0)
+                if (age <= 0)
                 {
                     throw new InvalidOperationException();
 
                 }
+                int age2;
+                int now;
+                now = DateTime.Now.Year;
+                age2 = now - age;
+                Console.WriteLine("You were born in:" + age2);
 
             }
             catch (InvalidOperationException)
@@ -27,11 +32,7 @@ namespace DivideByZero
                 Console.WriteLine("that is invail input!");
             }
             
-            int age2;
-            int now;
-             now = DateTime.Now.Year;
-            age2 = now - age;
-            Console.WriteLine("You were born in:" + age2);  
+        
             Console.ReadLine();
         }
     }
