@@ -8,17 +8,17 @@ namespace ClassesAndStuff
 {
     class Methods
     {
-        public static int multiply(int i, int j)
+        public int multiply(int i, int j)
         {
             int total = i * j;
             return (total);
         }
-        public static int sum(int i, int j)
+        public int sum(int i, int j)
         {
             int total = i + j;
             return (total);
         }
-        public static int sub(int i, int j)
+        public int sub(int i, int j)
         {
             int total = i - j;
             return (total);
