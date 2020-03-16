@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AE9486DE-5549-4381-82C8-3D22940A52F3}</ProjectGuid>
+    <ProjectGuid>{5DB8C1E3-D5EF-4EAD-B4A1-01DAD48D261A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ClassesAndStuff</RootNamespace>
-    <AssemblyName>ClassesAndStuff</AssemblyName>
+    <RootNamespace>ClassesAndStuff2</RootNamespace>
+    <AssemblyName>ClassesAndStuff2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Methods.cs" />
+    <Compile Include="BasicMaths.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
