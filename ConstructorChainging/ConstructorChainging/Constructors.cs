@@ -8,34 +8,21 @@ namespace ConstructorChainging
 {
     class Constructors
     {
-        string _studentType = "<Senior>";
-        string _id = "8";
-        string _fName = "Bob";
-        string _lName = "Smith";
+        public string Name = "bob";
+        public int ID = 7;
 
-        public Constructors(string id)
-            : this(id, "Bob", "Smith")
+        public Constructors(string name): this(name, 100)
         {
 
         }
 
-        public Constructors(string id, string fName)
-            : this(id, fName, "Smith")
+        public Constructors(string name, int id)
         {
-
+            name = Name;
+            id = ID;
         }
-
-        public Constructors(string id, string fName, string lName)
-        {
-            //Validate logic.....
-            _studentType = "<Senior>";
-
-            _id = id;
-            _fName = fName;
-            _lName = lName;
-        }
-    }       
-     
+    }
+}
  
     
 

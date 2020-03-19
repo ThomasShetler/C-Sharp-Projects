@@ -17,8 +17,23 @@ namespace ConstructorChainging
             Constructors obj = new Constructors("Thomas",7);
             //THIS IS VAR VALUEEEEEE REEEEEEEEEEEEEEEEEEEEEEEE
             var newDickie = new Dictionary<string, string>();
-                     
 
+            bool isTriggered = false;
+
+            Console.WriteLine("are you triggered?????? Y/N");
+            string awnser = Console.ReadLine();
+            if (awnser == "Y")
+            {
+                isTriggered = true;
+            }
+            else
+            {
+                isTriggered = false;
+            }
+            while (isTriggered == true)
+            {
+                Console.WriteLine("REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+            }
 
         }
     }
