@@ -12,6 +12,8 @@ namespace AbstractClassesAndStuff
         {
             Employee Joe = new Employee();
             Joe.SayName("sample", "Student");
+            //not entirely sure this is what i was supposed to do, But I tried my best!
+            Joe.Quit();
 
         }
     }
