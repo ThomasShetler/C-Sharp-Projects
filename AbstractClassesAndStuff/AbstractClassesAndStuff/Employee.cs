@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace AbstractClassesAndStuff
 {
-    class Employee: person, IQuittable
+    class Employee : person, IQuittable
     {
-        public string SayName(string first, string last)
+
+        public int Id { get; set; }
+        public new string SayName()
         {
-            FirstName = first;
-            LastName = last;
-            return (first + " " + last);
+            
+            return (Id + " " + FirstName + " " + LastName);
         }
         public void Quit()
         {
@@ -20,5 +21,31 @@ namespace AbstractClassesAndStuff
             Console.WriteLine(FirstName + " Has Quit");
             
         }
+        public static bool operator ==(Employee employee1, Employee employee2)
+        {
+            if (employee1.Id == employee2.Id)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+
+        }
+        public static bool operator !=(Employee employee1, Employee employee2)
+        {
+            if (employee1.Id == employee2.Id)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
     }
 }

@@ -10,11 +10,10 @@ namespace AbstractClassesAndStuff
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string SayName(string first, string last)
+        public string SayName()
         {
-            FirstName = first;
-            LastName = last;
-            return (first + " " + last);
+        
+            return (FirstName + " " +LastName);
         } 
     }
 }
